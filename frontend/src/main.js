@@ -1,11 +1,32 @@
 import { createApp } from 'vue'
-import 'primevue/resources/themes/lara-dark-green/theme.css'
-//import './style.css'
+import 'primevue/resources/themes/lara-light-green/theme.css'
+import 'primeicons/primeicons.css'
+
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import {
+    RiNodeTree, MdAccounttreeOutlined,
+    IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
+    IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline,
+    LaUsersSolid
+} from "oh-vue-icons/icons";
+addIcons(
+    RiNodeTree, MdAccounttreeOutlined,
+    IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
+    IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline,
+    LaUsersSolid
+);
+
+import './style.css'
 import App from './App.vue'
-import PrimeVue from 'primevue/config';
+import PrimeVue from 'primevue/config'
 import router from './router'
+import { pinia } from './stores'
 
 const app = createApp(App);
 app.use(PrimeVue);
 app.use(router);
+app.use(pinia);
+
+app.component("OhVueIcon", OhVueIcon);
+
 app.mount('#app')

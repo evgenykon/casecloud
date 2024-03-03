@@ -9,4 +9,7 @@ export default defineConfig({
     strictPort: true
   },
   plugins: [vue()],
+  optimizeDeps: {
+    exclude: ['oh-vue-icons/icons'],
+  },
 })
