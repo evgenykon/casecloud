@@ -4,6 +4,8 @@ import ListItemBadge from "../components/dashboard/ListItemBadge.vue";
 import { useUserStore } from '../stores/user'
 import { useTestStore } from '../stores/test'
 import ListItemBug from "../components/dashboard/ListItemBug.vue";
+import ActivityRow from "../components/dashboard/ActivityRow.vue";
+import WorkloadProgressBar from "../components/dashboard/WorkloadProgressBar.vue";
 
 const users = useUserStore()
 const tests = useTestStore()
@@ -67,6 +69,30 @@ const tests = useTestStore()
       </div>
     </div>
 
+    <div class="row">
+      <h4 class="col">Last activity</h4>
+      <h4 class="col">Test team workload</h4>
+    </div>
+
+    <div class="row">
+      <div class="col card rounded bg-grey">
+        <activity-row v-for="item of tests.lastActivity"
+                      :date-at="item.dateAt"
+                      :user="item.user"
+                      :branch="item.branch"
+                      :action="item.action"
+                      :request-number="item.requestNumber"
+                      :comment="`defines ${item.modulesCount} modules with ${item.casesCount} cases to check`"
+        />
+      </div>
+      <div class="col card rounded">
+        <workload-progress-bar v-for="item of tests.teamWorkload"
+                               :user="item.user"
+                               :completed-cases="item.completeCasesCount"
+                               :total-completed-cases="item.totalCompleteCasesCount"></workload-progress-bar>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -77,10 +103,7 @@ const tests = useTestStore()
   }
   .card {
     padding: 5px;
-    &.rounded {
-      border: 1px solid var(--card-border);
-      border-radius: 5px;
-    }
+    margin-bottom: 24px;
     & > .head {
       font-size: 14px;
       display: flex;

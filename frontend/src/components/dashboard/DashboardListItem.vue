@@ -7,7 +7,6 @@ const props = defineProps({
   createdBy: {type: String, required: true},
   testedAt: {type: String},
   testedBy: {type: String},
-
 })
 </script>
 
