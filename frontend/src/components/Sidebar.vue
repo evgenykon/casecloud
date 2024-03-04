@@ -9,7 +9,7 @@ const items = ref([
   {src: '/', label: 'Dashboard', icon: 'io-home-outline'},
   {src: '/modules', label: 'Modules', icon: 'io-extension-puzzle-outline'},
   {src: '/tests', label: 'Tests', icon: 'io-checkmark-done-outline'},
-  {src: '/team', label: 'Team', icon: 'la-users-solid'},
+  {src: '/team', label: 'Team', icon: 'io-people-outline'},
 ])
 </script>
 
@@ -34,6 +34,7 @@ const items = ref([
   overflow: hidden;
   display: flex;
   flex-flow: column;
+  box-sizing: border-box;
   > * {
     margin: 0;
     padding: 0;
@@ -81,10 +82,10 @@ const items = ref([
       background-color: var(--sidebar-hover-bg);
       color: var(--sidebar-hover-text);
       & > .ov-icon {
-        color: var(--sidebar-hover-text);
+        color: var(--link-hover);
       }
       & > span.label {
-        color: var(--sidebar-hover-text);
+        color: var(--link-hover);
       }
     }
   }

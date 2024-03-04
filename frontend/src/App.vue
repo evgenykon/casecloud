@@ -25,6 +25,10 @@ html, body, #app {
 main.authorized {
   .page-content {
     margin-left: 90px;
+    padding: 16px 24px;
+    .page-title {
+      margin-bottom: 16px;
+    }
   }
 }
 </style>

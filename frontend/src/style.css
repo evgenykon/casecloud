@@ -13,10 +13,36 @@
   -moz-osx-font-smoothing: grayscale;
 
   --text-color-active: #000000;
+  --link-hover: #0c4800;
+  --link-color: #212121;
   --text-color-disabled: #dadada;
   --sidebar-bg: #f0f0f0;
   --sidebar-active-bg: #868686;
   --sidebar-active-text: #ffffff;
   --sidebar-hover-bg: #a4a4a4;
   --sidebar-hover-text: #dadada;
+  --card-border: #dadada;
+  --badge-bg-grey: #dadada;
+  --row-bg-light: #f8f8f8;
+  --row-bg-dark: #ececec;
+  --success-green: #0C9500;
+  --fail-red: #E61313;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  gap: 16px;
+  .col {
+    flex: 1;
+  }
 }

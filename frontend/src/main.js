@@ -4,15 +4,17 @@ import 'primeicons/primeicons.css'
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
+    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard,
     RiNodeTree, MdAccounttreeOutlined,
     IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
-    IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline,
+    IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline, IoPeopleOutline,
     LaUsersSolid
 } from "oh-vue-icons/icons";
 addIcons(
+    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard,
     RiNodeTree, MdAccounttreeOutlined,
     IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
-    IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline,
+    IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline, IoPeopleOutline,
     LaUsersSolid
 );
 

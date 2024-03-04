@@ -1,35 +1,207 @@
 import { defineStore } from 'pinia'
 
-
 export const useTestStore = defineStore({
     id: 'test',
     state: () => ({
-        // name: 'Eduardo',
-        // /** @type {boolean} */
-        // isAdmin: true,
+        createdList: [
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+            {
+                number: 234567,
+                branch: 'feature/324534',
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 3,
+                casesCount: 29
+            },
+        ],
+        testedList: [
+            {
+                number: 34567,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 0,
+            },
+            {
+                number: 34576,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 2,
+            },
+            {
+                number: 34567,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 0,
+            },
+            {
+                number: 34576,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 2,
+            },
+            {
+                number: 34567,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 0,
+            },
+            {
+                number: 34576,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 2,
+            },
+            {
+                number: 34567,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 0,
+            },
+            {
+                number: 34576,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 2,
+            },
+            {
+                number: 34567,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 0,
+            },
+            {
+                number: 34576,
+                branch: 'feature/34567',
+                createdAt: '7 Sept, 17:00',
+                createdBy: 'Ken Block',
+                testedAt: '8 Sept, 17:00',
+                testedBy: 'Ned Flanders',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 2,
+            },
+        ],
     }),
+    getters: {
+        //createdTests: (state) => state.created,
+    },
     actions: {
-        /**
-         * Attempt to login a user
-         * @param {string} user
-         * @param {string} password
-         */
-        // async login(user, password) {
-        //     const userData = await apiLogin(user, password)
-        //
-        //     this.patch({
-        //         name: user,
-        //         ...userData,
-        //     })
-        // },
-        // logout() {
-        //     this.patch({
-        //         name: '',
-        //         isAdmin: false,
-        //     })
-        //
-        //     // we could do other stuff like redirecting the user
-        // },
     },
 })
 
