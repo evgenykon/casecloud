@@ -4,18 +4,20 @@ import 'primeicons/primeicons.css'
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
-    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard,
+    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard, BiXOctagon, BiJournalPlus, BiTrash,
     RiNodeTree, MdAccounttreeOutlined,
     IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
     IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline, IoPeopleOutline,
-    LaUsersSolid
+    LaUsersSolid,
+    MdModeeditOutlined
 } from "oh-vue-icons/icons";
 addIcons(
-    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard,
+    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard, BiXOctagon, BiJournalPlus, BiTrash,
     RiNodeTree, MdAccounttreeOutlined,
     IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
     IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline, IoPeopleOutline,
-    LaUsersSolid
+    LaUsersSolid,
+    MdModeeditOutlined
 );
 
 import './style.css'

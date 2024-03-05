@@ -6,7 +6,13 @@ const routes = [
         name: "Dashboard",
         component: () => import('./views/Dashboard.vue'),
         meta: {title: 'Dashboard - Case Cloud'}
-    }
+    },
+    {
+        path: "/modules",
+        name: "Modules",
+        component: () => import('./views/Modules.vue'),
+        meta: {title: 'Modules - Case Cloud'}
+    },
 ];
 
 const router = createRouter({

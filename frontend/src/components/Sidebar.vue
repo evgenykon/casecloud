@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import { useRouter, useRoute } from 'vue-router'
 
 defineProps({
   active: String,
@@ -11,6 +12,9 @@ const items = ref([
   {src: '/tests', label: 'Tests', icon: 'io-checkmark-done-outline'},
   {src: '/team', label: 'Team', icon: 'io-people-outline'},
 ])
+
+const router = useRouter()
+const route = useRoute()
 </script>
 
 <template>
@@ -18,10 +22,10 @@ const items = ref([
     <div class="logo-wrapper">
       <img src="/logo.png" alt="logo">
     </div>
-    <a v-for="item in items" class="item" :href="item.src">
+    <router-link v-for="item in items" :to="item.src" class="item" :class="{active: route.path === item.src}">
       <oh-vue-icon :name="item.icon" scale="2" />
       <span class="label">{{ item.label }}</span>
-    </a>
+    </router-link>
   </div>
 </template>
 

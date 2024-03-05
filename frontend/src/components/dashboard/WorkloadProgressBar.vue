@@ -11,10 +11,10 @@ const props = defineProps({
 
 <template>
   <div class="workload-progressbar">
-    <span class="user" href="#" :id="`user_process_1`">
+    <a class="user" href="#" :id="`user_process_1`">
       <oh-vue-icon name="bi-person-bounding-box"></oh-vue-icon>
       {{ props.user }}
-    </span>
+    </a>
     <div class="bar-container">
       <ProgressBar
           aria-label="user_process_1"
@@ -30,6 +30,8 @@ const props = defineProps({
   display: flex;
   gap: 10px;
   margin-bottom: 5px;
+  padding: 6px;
+  font-size: 14px;
   .bar-container {
     position: relative;
     flex: 1;

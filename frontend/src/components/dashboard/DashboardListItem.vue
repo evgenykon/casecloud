@@ -15,18 +15,18 @@ const props = defineProps({
   <span class="item-num">#{{ props.number }}</span>
   <span class="branch">{{ props.branch }}</span>
   <div class="column">
-    <span class="column-line">
+    <span class="column-line nowrap">
       <img src="/code-block.svg" alt="tester" style="margin: 0 3px 0 8px;">
       {{ props.createdAt }}
     </span>
-    <span class="column-line">
+    <span class="column-line nowrap">
       <img src="/test-tool.svg" alt="tester" style="margin: 0 3px 0 8px;">
       {{ props.testedAt ?? '---' }}
     </span>
   </div>
   <div class="column">
-    <span>{{ props.createdBy }}</span>
-    <span>{{ props.testedBy ?? '---' }}</span>
+    <span class="nowrap">{{ props.createdBy }}</span>
+    <span class="nowrap">{{ props.testedBy ?? '---' }}</span>
   </div>
   <div class="badges">
     <slot></slot>
@@ -46,8 +46,7 @@ const props = defineProps({
   border-radius: 5px;
   font-size: 14px;
   & > .item-num {
-    width: 10%;
-    min-width: 50px;
+    margin-right: 8px;
   }
   & > .branch {
     width: 30%;

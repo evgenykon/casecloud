@@ -1,11 +1,12 @@
 <script setup>
-import DashboardListItem from "../components/dashboard/DashboardListItem.vue";
-import ListItemBadge from "../components/dashboard/ListItemBadge.vue";
 import { useUserStore } from '../stores/user'
 import { useTestStore } from '../stores/test'
+import DashboardListItem from "../components/dashboard/DashboardListItem.vue";
+import ListItemBadge from "../components/dashboard/ListItemBadge.vue";
 import ListItemBug from "../components/dashboard/ListItemBug.vue";
 import ActivityRow from "../components/dashboard/ActivityRow.vue";
 import WorkloadProgressBar from "../components/dashboard/WorkloadProgressBar.vue";
+import ListItemBlock from "../components/dashboard/ListItemBlock.vue";
 
 const users = useUserStore()
 const tests = useTestStore()
@@ -61,6 +62,7 @@ const tests = useTestStore()
               :tested-by="test.testedBy"
               clickable
           >
+            <list-item-block />
             <list-item-bug :value="test.bugsCount" />
             <list-item-badge color="grey" :value="test.modulesCount" />
             <list-item-badge color="grey" :value="test.casesCount" />
@@ -86,6 +88,12 @@ const tests = useTestStore()
         />
       </div>
       <div class="col card rounded">
+        <div class="head">
+          <span class="title"></span>
+          <span>1 day</span>
+          <a href="#">2 days</a>
+          <a href="#">1 week</a>
+        </div>
         <workload-progress-bar v-for="item of tests.teamWorkload"
                                :user="item.user"
                                :completed-cases="item.completeCasesCount"
