@@ -4,20 +4,26 @@ import 'primeicons/primeicons.css'
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
-    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard, BiXOctagon, BiJournalPlus, BiTrash,
+    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard, BiXOctagon, BiJournalPlus,
+    BiTrash, BiFolderMinus, BiFolderPlus, BiFileEarmark, BiFileEarmarkPlus,
     RiNodeTree, MdAccounttreeOutlined,
-    IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
+    IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline,
+    IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
     IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline, IoPeopleOutline,
     LaUsersSolid,
-    MdModeeditOutlined
+    MdModeeditOutlined,
+    RiSaveLine
 } from "oh-vue-icons/icons";
 addIcons(
-    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard, BiXOctagon, BiJournalPlus, BiTrash,
+    BiUiChecks, BiPersonBoundingBox, BiBraces, BiBug, BiKeyboard, BiXOctagon, BiJournalPlus,
+    BiTrash, BiFolderMinus, BiFolderPlus, BiFileEarmark, BiFileEarmarkPlus,
     RiNodeTree, MdAccounttreeOutlined,
-    IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline, IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
+    IoAddCircleOutline, IoAddSharp, IoBanOutline, IoCheckboxOutline, IoCheckmarkCircleOutline,
+    IoCheckmarkDoneOutline, IoCheckmark, IoCloseOutline, IoCreateOutline,
     IoDocumentTextOutline, IoExtensionPuzzleOutline, IoHomeOutline, IoPeopleOutline,
     LaUsersSolid,
-    MdModeeditOutlined
+    MdModeeditOutlined,
+    RiSaveLine
 );
 
 import './style.css'

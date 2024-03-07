@@ -5,13 +5,13 @@ import Tree from 'primevue/tree';
 const nodes = ref([
   {
     key: 1,
-    label: 'Lab 1',
-    icon: 'pi pi-fw pi-inbox',
+    label: 'Module 1',
+    icon: 'pi pi-fw pi-ticket',
     children: [
       {
         key: 11,
-        label: 'Lab 11',
-        icon: 'pi pi-fw pi-inbox',
+        label: 'Module 11',
+        icon: 'pi pi-fw pi-ticket',
         children: [
 
         ]
@@ -21,7 +21,7 @@ const nodes = ref([
   {
     key: 2,
     label: 'Lab 2',
-    icon: 'pi pi-fw pi-inbox',
+    icon: 'pi pi-fw pi-ticket',
     children: []
   },
 ]);
@@ -29,14 +29,46 @@ const nodes = ref([
 </script>
 
 <template>
-  <Tree :value="nodes" selectionMode="checkbox" class="w-full md:w-30rem">
+  <Tree :value="nodes" selectionMode="checkbox" class="module-tree w-full md:w-30rem">
     <template #default="slotProps">
-      <b>{{ slotProps.node.label }}</b>
+      <div class="controls">
+        <a href="#">
+          <oh-vue-icon name="bi-folder-minus" />
+        </a>
+        <a href="#">
+          <oh-vue-icon name="bi-folder-plus" />
+        </a>
+        <a href="#">
+          <oh-vue-icon name="md-modeedit-outlined" :scale="1" />
+        </a>
+      </div>
+      <span>{{ slotProps.node.label }}</span>
     </template>
   </Tree>
 
 </template>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+.module-tree {
+  .p-treenode {
+    padding: 2px;
+    .p-treenode-content {
+      .p-treenode-label {
+        display: flex;
+        gap: 5px;
+        .controls {
+          display: flex;
+          gap: 3px;
+          margin: 0 5px;
+          svg {
+            color: var(--tree-icon-color);
+            &:hover {
+              color: var(--tree-icon-color-hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>
