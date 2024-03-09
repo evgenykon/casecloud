@@ -13,6 +13,18 @@ const routes = [
         component: () => import('./views/Modules.vue'),
         meta: {title: 'Modules - Case Cloud'}
     },
+    {
+        path: "/team",
+        name: "Team",
+        component: () => import('./views/Team.vue'),
+        meta: {title: 'Team - Case Cloud'}
+    },
+    {
+        path: "/tests",
+        name: "Tests",
+        component: () => import('./views/Tests.vue'),
+        meta: {title: 'Tests - Case Cloud'}
+    },
 ];
 
 const router = createRouter({

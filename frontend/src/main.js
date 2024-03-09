@@ -29,6 +29,7 @@ addIcons(
 import './style.css'
 import App from './App.vue'
 import PrimeVue from 'primevue/config'
+import ConfirmationService from 'primevue/confirmationservice';
 import router from './router'
 import { pinia } from './stores'
 
@@ -36,6 +37,7 @@ const app = createApp(App);
 app.use(PrimeVue);
 app.use(router);
 app.use(pinia);
+app.use(ConfirmationService);
 
 app.component("OhVueIcon", OhVueIcon);
 

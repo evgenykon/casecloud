@@ -1,51 +1,31 @@
 <script setup>
 import { ref } from 'vue';
-
 import Tree from 'primevue/tree';
-const nodes = ref([
-  {
-    key: 1,
-    label: 'Module 1',
-    icon: 'pi pi-fw pi-ticket',
-    children: [
-      {
-        key: 11,
-        label: 'Module 11',
-        icon: 'pi pi-fw pi-ticket',
-        children: [
-
-        ]
-      }
-    ]
-  },
-  {
-    key: 2,
-    label: 'Lab 2',
-    icon: 'pi pi-fw pi-ticket',
-    children: []
-  },
-]);
+const props = defineProps({
+  tree: {type: Array, required: true, default: () => []}
+})
+const selectedKey = ref(null);
+const emit = defineEmits(['edit-node', 'select-nodes', 'add-sub-node'])
 
 </script>
 
 <template>
-  <Tree :value="nodes" selectionMode="checkbox" class="module-tree w-full md:w-30rem">
+  <Tree :value="props.tree"
+        v-model:selectionKeys="selectedKey"
+        selectionMode="single"
+        class="module-tree w-full md:w-30rem"
+        @nodeSelect="node => emit('edit-node', node)"
+  >
     <template #default="slotProps">
       <div class="controls">
-        <a href="#">
-          <oh-vue-icon name="bi-folder-minus" />
-        </a>
-        <a href="#">
+        <a href="#" @click.stop="emit('add-sub-node', slotProps.node)">
           <oh-vue-icon name="bi-folder-plus" />
-        </a>
-        <a href="#">
-          <oh-vue-icon name="md-modeedit-outlined" :scale="1" />
         </a>
       </div>
       <span>{{ slotProps.node.label }}</span>
     </template>
   </Tree>
-
+  {{ selectedKey }}
 </template>
 
 <style lang="scss">
