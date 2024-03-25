@@ -104,6 +104,7 @@ const deleteCaseConfirmation = (event) => {
 <template>
   <div class="modules">
     <h1 class="page-title">Modules</h1>
+
     <Toolbar>
       <Button>
         <oh-vue-icon name="bi-journal-plus" :scale="1" />

@@ -27,6 +27,7 @@ button.button {
     box-shadow: none;
     border: 1px solid var(--shadow);
     margin-right: -2px;
+    margin-bottom: -2px;
   }
 }
 </style>

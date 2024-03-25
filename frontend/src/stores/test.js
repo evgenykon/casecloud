@@ -256,6 +256,21 @@ export const useTestStore = defineStore({
                 totalCompleteCasesCount: 25,
             }
         ],
+        fullTable: [
+            {
+                id: 1234,
+                dateAt: '8 Sept, 10:00',
+                user: 'Ken Block',
+                testedBy: 'Ned Flanders',
+                action: 'assign',
+                requestNumber: 1234,
+                branch: 'feature/123',
+                modulesCount: 3,
+                casesCount: 29,
+                bugsCount: 0,
+                status: 'Not started',
+            },
+        ]
     }),
     getters: {
         //createdTests: (state) => state.created,

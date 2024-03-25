@@ -22,8 +22,20 @@ const routes = [
     {
         path: "/tests",
         name: "Tests",
-        component: () => import('./views/Tests.vue'),
+        component: () => import('./views/tests/Index.vue'),
         meta: {title: 'Tests - Case Cloud'}
+    },
+    {
+        path: "/tests/new",
+        name: "NewTestRequest",
+        component: () => import('./views/tests/NewRequest.vue'),
+        meta: {title: 'New test request - Case Cloud'}
+    },
+    {
+        path: "/tests/:id",
+        name: "EditTestRequest",
+        component: () => import('./views/tests/EditRequest.vue'),
+        meta: {title: 'Test request - Case Cloud'}
     },
 ];
 
