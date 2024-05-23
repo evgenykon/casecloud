@@ -291,6 +291,18 @@ export const useTestStore = defineStore({
                 casesCount: 0
             }
         },
+        loadRequest(id) {
+            this.currentRequest = {
+                id: 1231231,
+                number: 123123,
+                projectId: 1,
+                branch: null,
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 0,
+                casesCount: 0
+            }
+        }
     },
 })
 

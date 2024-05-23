@@ -80,10 +80,5 @@ watch(currentProject, (value) => {
     flex-direction: column;
     gap: 8px;
   }
-  .input-form-comments {
-    border: 1px solid #e5e7eb;
-    height: 114px;
-    margin-bottom: 8px;
-  }
 }
 </style>
