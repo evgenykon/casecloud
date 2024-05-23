@@ -20,7 +20,7 @@ const route = useRoute()
 <template>
   <div class="sidebar">
     <div class="logo-wrapper">
-      <img src="/logo.png" alt="logo">
+      <img src="/logo.svg" alt="logo">
     </div>
     <router-link v-for="item in items" :to="item.src" class="item" :class="{active: route.path === item.src}">
       <oh-vue-icon :name="item.icon" scale="2" />

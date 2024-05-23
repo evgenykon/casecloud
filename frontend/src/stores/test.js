@@ -270,12 +270,27 @@ export const useTestStore = defineStore({
                 bugsCount: 0,
                 status: 'Not started',
             },
-        ]
+        ],
+        currentRequest: null
     }),
     getters: {
         //createdTests: (state) => state.created,
     },
     actions: {
+        resetCurrentRequest() {
+            this.currentRequest = null
+        },
+        newRequest(project) {
+            this.currentRequest = {
+                number: null,
+                projectId: project.id,
+                branch: null,
+                createdAt: '7 Sept, 15:00',
+                createdBy: 'Ken Block',
+                modulesCount: 0,
+                casesCount: 0
+            }
+        },
     },
 })
 

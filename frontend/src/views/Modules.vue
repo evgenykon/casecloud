@@ -129,6 +129,8 @@ const deleteCaseConfirmation = (event) => {
       <div class="col">
         <ModuleTree
             :tree="modules.currentProject.modules"
+            selection-mode="single"
+            :creating-nodes="true"
             @edit-node="onEditNode"
             @add-sub-node="onAddSubNode"
         ></ModuleTree>

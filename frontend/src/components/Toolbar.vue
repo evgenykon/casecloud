@@ -16,5 +16,7 @@
   width: 100%;
   gap: 8px;
   border-radius: 5px;
+  align-items: center;
+  line-height: 20px;
 }
 </style>

@@ -28,13 +28,13 @@ const routes = [
     {
         path: "/tests/new",
         name: "NewTestRequest",
-        component: () => import('./views/tests/NewRequest.vue'),
+        component: () => import('./views/tests/New.vue'),
         meta: {title: 'New test request - Case Cloud'}
     },
     {
         path: "/tests/:id",
         name: "EditTestRequest",
-        component: () => import('./views/tests/EditRequest.vue'),
+        component: () => import('./views/tests/_id/Index.vue'),
         meta: {title: 'Test request - Case Cloud'}
     },
 ];
